@@ -1,0 +1,42 @@
+app:
+  image: euri/case-mjrcenter-app
+  environment:
+    SERVICE_NAME: app
+mjr:
+  image: euri/case-mjrcenter-mjr
+  environment:
+    SERVICE_NAME: mjr
+authentication:
+  image: euri/case-mjrcenter-authentication
+  environment:
+    SERVICE_NAME: authentication
+schedule:
+  image: euri/case-mjrcenter-schedule
+  environment:
+    SERVICE_NAME: schedule
+registration:
+  image: euri/case-mjrcenter-registration
+  environment:
+    SERVICE_NAME: registration
+voucher:
+  image: euri/case-mjrcenter-voucher
+  environment:
+    SERVICE_NAME: voucher
+payment:
+  image: euri/case-mjrcenter-payment
+  environment:
+    SERVICE_NAME: payment
+
+gateway:
+  image: euri/case-mjrcenter-gateway
+  links:
+    - app
+    - mjr
+    - authentication
+    - schedule
+    - registration
+    - voucher
+    - payment
+  ports:
+    - 80
+    - 443
