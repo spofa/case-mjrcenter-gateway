@@ -1,2 +1,2 @@
-./git pull
-./start.sh
+git pull
+sh ./start.sh
