@@ -28,7 +28,8 @@ registration:
 #     SERVICE_NAME: payment
 
 gateway:
-  image: euri/case-mjrcenter-gateway
+  build:
+    context: ./gateway
   links:
     - app
     # - mjr
