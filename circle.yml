@@ -1,3 +1,6 @@
+compile:
+  commands:
+    - ls
 deployment:
   production:
     branch: master
