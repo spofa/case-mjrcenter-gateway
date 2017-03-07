@@ -1,0 +1,8 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - ssh msdn@mjr-center.westeurope.cloudapp.azure.com <<'ENDSSH'
+      - ./git pull
+      - ./start.sh
+      - ENDSSH
