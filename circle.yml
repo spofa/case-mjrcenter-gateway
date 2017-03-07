@@ -1,6 +1,6 @@
 compile:
-  commands:
-    - ls
+  override:
+    - git status -b
 deployment:
   production:
     branch: master
